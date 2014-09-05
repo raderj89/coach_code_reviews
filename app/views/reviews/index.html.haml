@@ -1,0 +1,20 @@
+= simple_form_for @review, html: { class: 'form-inline' }, remote: true do |f|
+  .form-group
+    = f.label :pull_request_url, class: 'sr-only'
+    = f.input_field :pull_request_url, size: 80, placeholder: 'Pull Request URL', class: 'form-control'
+  
+  = f.submit "Request Review", class: 'btn btn-primary'
+
+%hr
+
+.col-md-5
+  Pull Request URL
+.col-md-1
+  Coach
+.col-md-3.col-md-offset-2
+  Status
+
+.reviews
+  = render @reviews
+
+  = will_paginate @reviews, renderer: BootstrapPagination::Rails

@@ -1,0 +1,3 @@
+<% if @review.destroyed? %>
+  $('#review-' + <%= @review.id %>).remove();
+<% end %>

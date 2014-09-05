@@ -1,0 +1,5 @@
+<% if @review.valid? %>
+  var $review = $('#review-' + <%= @review.id %>);
+
+  $review.html("<%= escape_javascript(render 'form', review: @review) %>");
+<% end %>

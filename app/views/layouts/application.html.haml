@@ -1,0 +1,23 @@
+!!! 5
+%html
+  %head
+    %title
+      Code Reviews
+    
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
+    = favicon_link_tag 'favicon.ico'
+    = csrf_meta_tags
+
+    %meta{ name: "viewport", content: "initial-scale=1, maximum-scale=1" }
+
+%body
+  .container
+
+    - flash.each do |type, msg|
+      %p= msg
+
+    .col-md-12
+      %h1 DBC Coaches Code Reviews
+      
+      = yield

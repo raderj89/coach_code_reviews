@@ -1,0 +1,5 @@
+<% if @review.persisted? %>
+  $('.reviews').prepend("<%= escape_javascript(render 'review', review: @review) %>");
+
+  $('form#new_review')[0].reset();
+<% end %>
