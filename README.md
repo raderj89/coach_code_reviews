@@ -1,28 +1,13 @@
-== README
+# Coach Code Reviews App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A super simple app that allows students to enter URLs for pull requests they want reviewed.
 
-Things you may want to cover:
+Coaches simply enter their name and update the status of the code review to active. When finished, simply select finished and hit update.
 
-* Ruby version
+- Yellow-highlighted requests mean no one is on the request.
+- Blue-highlighting means a coach is actively reviewing the request.
+- Green means they have finished reviewing the request.
 
-* System dependencies
+### TODO:
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Put this explainer in the app.
