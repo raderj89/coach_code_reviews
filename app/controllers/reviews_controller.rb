@@ -37,7 +37,7 @@ class ReviewsController < ApplicationController
       flash.now[:error] = "There was a problem destroying review."
     end
 
-    respond_with(@destroy)
+    respond_with(@review)
   end
 
   private
