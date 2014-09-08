@@ -7,7 +7,7 @@ feature 'Create reviews', js: true do
     visit '/'
   end
 
-  scenario 'with valid information' do
+  scenario 'with valid pull request url' do
     fill_in 'Pull Request URL', with: review.pull_request_url
 
     click_button "Request Review"
@@ -16,6 +16,14 @@ feature 'Create reviews', js: true do
 
     within '.reviews' do
       expect(page).to have_content(review.pull_request_url)
+    end
+  end
+
+  scenario 'with no pull request url' do
+    click_button "Request Review"
+
+    within '.reviews' do
+      expect(page).to_not have_content(review.pull_request_url)
     end
   end
 end
