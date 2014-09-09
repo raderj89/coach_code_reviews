@@ -27,6 +27,8 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'capybara'
   gem 'selenium-webdriver'
+  gem 'simplecov', '~>0.8.0', require: false
+  gem 'shoulda-matchers', require: false
 end
 
 group :production do
